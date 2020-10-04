@@ -8,4 +8,13 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .header__bk
+    .header
+      .header__title
+        = link_to "Ki-awase",root_path
+      .header__btn
+        .header__btn__left
+          = link_to "Sign-up",new_user_registration_path
+        .header__btn__right
+          = link_to "Sign-in",user_session_path
     = yield

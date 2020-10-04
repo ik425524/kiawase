@@ -1,0 +1,80 @@
+// 共通設定
+* {
+  font-family: cursive;
+  color: white;
+  text-shadow: 2px 2px 2px #808080;
+  -webkit-transition: all 0.9s ease;
+  -moz-transition: all 0.9s ease;
+  -o-transition: all 0.9s ease;
+  transition: all 0.1s ease;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+}
+// ヘッダー
+.header__bk {
+  height: 80px;
+}
+.header {
+  height: 95px;
+  background-color: #7bf4a9;
+  color: white;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: -10px;
+  border-style: solid;
+
+  &__title {
+    font-size: 50px;
+    margin-left: 20px;
+  }
+  &__title:hover {
+    font-size: 60px;
+  }
+  &__btn {
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    font-size: 20px;
+
+    &__right:hover {
+      font-size: 30px;
+    }
+    &__left:hover {
+      font-size: 30px;
+    }
+  }
+}
+// メインページ
+.main {
+  height: 800px;
+  background-image: image-url("IMG_2510.JPG");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__text {
+    font-size: 20px;
+    padding: 100px 0 0 10%;
+    line-height: 200%;
+  }
+  &__btn {
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    margin: 50px 0 0 20%;
+    background-color: #7bf4a9;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    border-style: solid;
+  }
+  &__btn:hover {
+    font-size: 30px;
+  }
+}

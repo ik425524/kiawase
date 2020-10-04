@@ -1,0 +1,50 @@
+// ユーザー登録 ログインページ
+.wrapper {
+  background-color: #e6d4bd;
+  height: 710px;
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+  }
+  .field {
+    font-size: 20px;
+    margin-top: 20px;
+
+    input {
+      color: initial;
+      font-size: initial;
+      text-shadow: initial;
+      font-family: initial;
+      height: 40px;
+      width: 30%;
+      border-radius: 10px;
+      border-style: solid;
+      cursor: pointer;
+    }
+    #user_remember_me {
+      width: 20px;
+      margin-top: 10px;
+    }
+  }
+  .actions {
+    margin-top: 20px;
+    input {
+      background-color: #bcf0d0;
+      border-radius: 10px;
+      width: 10%;
+      border-style: solid;
+      cursor: pointer;
+    }
+    input:hover {
+      font-size: 20px;
+    }
+  }
+  a {
+    margin-top: 30px;
+    display: inline-block;
+  }
+  a:hover {
+    font-size: 20px;
+  }
+}
