@@ -1,41 +1,30 @@
 .wrapper
   .mypage__title
-    My-page
+    = @nickname
+    sMy-page
   %input{name:"search__box", type: "search"}/
   %input{name:"search__btn", type: "submit" ,value: "serach"}/
   .topps__container
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
   .bottoms__container
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
-    = image_tag "yuusya_game.png", class: "topps__container__image"
-    = image_tag "IMG_2510.JPG", class: "topps__container__image"
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
   .registration__btns
     .registration__btns__topps
-      Topps-registration
+      = link_to "Topps-registration",new_topp_path
     .registration__btns__bottoms
-      Bottms-registration
+      = link_to "Bottms-registration",new_bottom_path
     

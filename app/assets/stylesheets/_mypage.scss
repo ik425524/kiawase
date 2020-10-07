@@ -32,6 +32,9 @@
       width: 150px;
       margin: 10px;
     }
+    &__image:hover {
+      opacity: 0.5;
+    }
   }
   .bottoms__container {
     display: flex;
@@ -45,6 +48,9 @@
       width: 150px;
       margin: 10px;
     }
+    &__image:hover {
+      opacity: 0.5;
+    }
   }
   .registration__btns {
     display: flex;
@@ -54,6 +60,9 @@
       border: solid 3px #8a8a8a;
       background-color: #bcf0d0;
       border-radius: 20px;
+    }
+    a {
+      margin-top: -30px;
     }
     &__topps:hover {
       font-size: 20px;

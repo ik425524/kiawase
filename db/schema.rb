@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_10_02_120156) do
 
   create_table "bottoms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
+    t.string "image"
     t.integer "size"
     t.string "maker"
     t.bigint "user_id"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_120156) do
   end
 
   create_table "topps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
+    t.string "image"
     t.integer "size"
     t.string "maker"
     t.bigint "user_id"
