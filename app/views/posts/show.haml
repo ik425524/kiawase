@@ -5,14 +5,16 @@
   %input{name:"search__box", type: "search"}/
   %input{name:"search__btn", type: "submit" ,value: "serach"}/
   .topps__container
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    - @topp_images.each do |t_image|
+      = link_to image_tag(t_image.image.to_s, class:"topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
   .bottoms__container
     = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
     = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'

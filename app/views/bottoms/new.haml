@@ -1,16 +1,17 @@
 .wrapper
   .registration__title
     image
-  %file_field{class:"image__registration"}
+  = form_with model: @bottom, class: :form, local: true do |form|
+    = form.file_field :image, class: :image__registration
     画像を選択してください
-  .registration__title
-    size
-  %input{class:"registration__box", type: "input"}
-  .registration__title
-    maker
-  %input{class:"registration__box", type: "input"}
-  .registration__title
-    category
-  %input{class:"registration__box", type: "input"}
-  .br/
-  %input{class:"registration__btn", type: "submit" ,value: "registration"}/
+    .registration__title
+      size
+    = form.text_field :size, class: :registration__box
+    .registration__title
+      maker
+    = form.text_field :maker, class: :registration__box
+    .registration__title
+      category
+    = form.text_field :category, class: :registration__box
+    .br/
+    = form.submit 'registration', class: :registration__btn

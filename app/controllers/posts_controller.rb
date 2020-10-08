@@ -8,6 +8,8 @@ class PostsController < ApplicationController
     redirect_to action: :index unless current_user == User.find(params[:id])
     user = User.find(params[:id])
     @nickname = user.nickname
+    @topp_images = Topp.all
+    @bottom_images = Bottom.all
   end
 
   private
