@@ -4,6 +4,7 @@ class CreateTopps < ActiveRecord::Migration[5.2]
       t.string :image
       t.integer :size
       t.string :maker
+      t.string :category
       t.references :user, foreign_key: true
 
       t.timestamps

@@ -1,25 +1,27 @@
 .wrapper
-  = image_tag "yuusya_game.png", class: "show__image"
+  = image_tag @topp.image.to_s, class: "show__image"
   .show
     .show__lists
       .show__lists__title
-        categorie
+        category
       .show__lists__list
-        Tシャツ
+        =@topp.category
     .show__lists
       .show__lists__title
         maker
       .show__lists__text
-        tetateto
+        =@topp.maker
     .show__lists
       .show__lists__title
         size
       .show__lists__text
-        90cm
-  .show__btns
-    .show__btns__left
-      Edit
-    .show__btns__right
-      Delete
+        =@topp.size
+  -if user_signed_in? && current_user.id == @topp.user_id
+    .show__btns
+      .show__btns__left
+        Edit
+      = link_to "Delete", topp_path(@topp.id), method: :delete, class: "show__btns__right"
+  
+ 
 
   

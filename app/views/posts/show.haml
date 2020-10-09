@@ -6,27 +6,13 @@
   %input{name:"search__btn", type: "submit" ,value: "serach"}/
   .topps__container
     - @topp_images.each do |t_image|
-      = link_to image_tag(t_image.image.to_s, class:"topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
-    -# = link_to image_tag("yuusya_game.png", class: "topps__container__image"),'/#'
+      = link_to image_tag(t_image.image.to_s, class:"topps__container__image"),"/topps/#{t_image.id}", method: :get
   .bottoms__container
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
-    = link_to image_tag("yuusya_game.png", class: "bottoms__container__image"),'/#'
+    - @bottom_images.each do |b_image|
+      = link_to image_tag(b_image.image.to_s, class:"bottoms__container__image"),"/bottoms/#{b_image.id}", method: :get
+    
   .registration__btns
     .registration__btns__topps
       = link_to "Topps-registration",new_topp_path
     .registration__btns__bottoms
       = link_to "Bottms-registration",new_bottom_path
-    

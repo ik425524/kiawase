@@ -1,4 +1,6 @@
 class ToppsController < ApplicationController
+  before_action :move_to_index
+
   def new
     @topp = Topp.new
   end
@@ -15,13 +17,21 @@ class ToppsController < ApplicationController
   end
 
   def destroy
+    topp = Topp.find(params[:id])
+    topp.destroy
+    redirect_to post_path(current_user),notice: "削除しました"
   end
 
   def show
+    @topp = Topp.find(params[:id])
   end
 
   private
   def topp_params
-    params.require(:topp).permit(:image, :size, :maker, :category_id).merge(user_id: current_user.id)
+    params.require(:topp).permit(:image, :size, :maker, :category).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to root_path unless user_signed_in?
   end
 end
