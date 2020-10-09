@@ -18,8 +18,7 @@
         =@topp.size
   -if user_signed_in? && current_user.id == @topp.user_id
     .show__btns
-      .show__btns__left
-        Edit
+      = link_to "Edit", edit_topp_path(@topp.id), class: "show__btns__left"
       = link_to "Delete", topp_path(@topp.id), method: :delete, class: "show__btns__right"
   
  

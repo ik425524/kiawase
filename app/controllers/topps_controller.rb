@@ -26,6 +26,16 @@ class ToppsController < ApplicationController
     @topp = Topp.find(params[:id])
   end
 
+  def edit
+    @topp = Topp.find(params[:id])
+  end
+
+  def update
+    topp = Topp.find(params[:id])
+    topp.update(topp_params)
+    redirect_to post_path(current_user),notice: "編集しました"
+  end
+
   private
   def topp_params
     params.require(:topp).permit(:image, :size, :maker, :category).merge(user_id: current_user.id)

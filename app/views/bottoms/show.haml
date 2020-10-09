@@ -18,6 +18,5 @@
         = @bottom.size
   -if user_signed_in? && current_user.id == @bottom.user_id
     .show__btns
-      .show__btns__left
-        Edit
+      = link_to "Edit", edit_bottom_path(@bottom.id), class: "show__btns__left"
       = link_to "Delete", bottom_path(@bottom.id), method: :delete, class: "show__btns__right"

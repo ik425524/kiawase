@@ -26,6 +26,16 @@ class BottomsController < ApplicationController
     @bottom = Bottom.find(params[:id])
   end
 
+  def edit
+    @bottom = Bottom.find(params[:id])
+  end
+
+  def update
+    bottom = Bottom.find(params[:id])
+    bottom.update(bottom_params)
+    redirect_to post_path(current_user),notice: "編集しました"
+  end
+
   private
   def bottom_params
     params.require(:bottom).permit(:image, :size, :maker, :category).merge(user_id: current_user.id)
