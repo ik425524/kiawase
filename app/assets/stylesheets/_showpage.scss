@@ -3,7 +3,7 @@
   .show__image {
     width: 300px;
     height: 300px;
-    margin: 20px;
+    margin-top: 50px;
   }
 
   .show {
@@ -16,28 +16,31 @@
   .show__btns {
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 80px;
+    font-size: 30px;
     &__left {
       border: solid 3px #8a8a8a;
       background-color: #bcf0d0;
       border-radius: 20px;
-      width: 100px;
+      width: 150px;
+      height: 50px;
     }
     a {
       margin-top: -30px;
     }
     &__left:hover {
-      font-size: 20px;
+      font-size: 40px;
       cursor: pointer;
     }
     &__right {
       border: solid 3px #8a8a8a;
       background-color: #bcf0d0;
       border-radius: 20px;
-      width: 100px;
+      width: 150px;
+      height: 50px;
     }
     &__right:hover {
-      font-size: 20px;
+      font-size: 40px;
       cursor: pointer;
     }
   }

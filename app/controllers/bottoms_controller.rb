@@ -11,8 +11,6 @@ class BottomsController < ApplicationController
       redirect_to post_path(current_user),notice: "登録が完了しました"    
     else
       redirect_to new_bottom_path,notice: "登録に失敗しました"
-    # Topp.create{topp_params}
-    # redirect_to root_path
     end
   end
 
@@ -34,6 +32,13 @@ class BottomsController < ApplicationController
     bottom = Bottom.find(params[:id])
     bottom.update(bottom_params)
     redirect_to post_path(current_user),notice: "編集しました"
+  end
+
+  def search
+    @bottom_images = Bottom.search(params[:keyword])
+    @topp_images = current_user.topps
+    user = User.find(params[:id])
+    @nickname = user.nickname
   end
 
   private

@@ -4,10 +4,10 @@
     sMy-page
   .search__boxs
     = form_with(url: search_topp_path, local: true, method: :get) do |form|
-      = form.text_field :keyword, placeholder: "topps category",  class: "search__box"
+      = form.text_field :keyword, placeholder: "topps category",class: "search__box"
       = form.submit "serach", class: "search__btn"
     = form_with(url: search_bottom_path, local: true, method: :get) do |form|
-      = form.text_field :keyword, placeholder: "bottoms category", class: "search__box"
+      = form.text_field :keyword, placeholder: "bottoms category",class: "search__box"
       = form.submit "serach", class: "search__btn"
   .topps__container
     - @topp_images.each do |t_image|
