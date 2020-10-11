@@ -7,6 +7,7 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:href => ".../path/to/slick.css", :rel => "stylesheet"}/
   %body
     .header__bk
     .header
@@ -25,3 +26,8 @@
             = link_to "Sign-in",user_session_path
     = render 'layouts/flash'
     = yield
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    %script{:src => ".../path/to/slick.min.js"}
+
+    
+

@@ -1,5 +1,8 @@
 // 投稿ページ
 .wrapper {
+  .image__registration {
+    margin-top: 30px;
+  }
   .image__registration:hover {
     font-size: 25px;
     cursor: pointer;
@@ -18,5 +21,13 @@
   }
   .registration__btn {
     margin-top: 30px;
+    background-color: #bcf0d0;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+  }
+  .registration__btn:hover {
+    font-size: 20px;
+    cursor: pointer;
   }
 }

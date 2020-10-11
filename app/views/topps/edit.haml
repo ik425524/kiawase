@@ -1,4 +1,6 @@
 .wrapper
+  .registration__title
+    edit
   = form_with model: @topp, class: :form, local: true do |form|
     = form.file_field :image, class: :image__registration
     画像を選択してください
