@@ -32,36 +32,39 @@
   .topps__container {
     display: flex;
     justify-content: center;
-    overflow-x: scroll;
     background-color: ivory;
-    -webkit-overflow-scrolling: touch;
     margin-top: 50px;
 
     &__image {
       height: 150px;
-      width: 150px;
+      width: 90%;
       margin: 10px;
       margin-top: -20px;
     }
     &__image:hover {
       opacity: 0.5;
+    }
+    .slick-next {
+      right: 25px;
     }
   }
   .bottoms__container {
     display: flex;
     justify-content: center;
-    overflow: scroll;
     background-color: ivory;
     margin-top: 5px;
 
     &__image {
       height: 150px;
-      width: 150px;
+      width: 90%;
       margin: 10px;
       margin-top: -20px;
     }
     &__image:hover {
       opacity: 0.5;
+    }
+    .slick-next {
+      right: 25px;
     }
   }
   .registration__btns {
