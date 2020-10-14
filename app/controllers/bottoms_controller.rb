@@ -26,6 +26,7 @@ class BottomsController < ApplicationController
 
   def edit
     @bottom = Bottom.find(params[:id])
+    redirect_to root_path,notice:"このurlは指定出来ません" unless current_user.id == @bottom.user_id
   end
 
   def update

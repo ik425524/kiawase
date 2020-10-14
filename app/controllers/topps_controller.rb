@@ -26,6 +26,7 @@ class ToppsController < ApplicationController
 
   def edit
     @topp = Topp.find(params[:id])
+    redirect_to root_path,notice:"このurlは指定出来ません" unless current_user.id == @topp.user_id
   end
 
   def update
@@ -47,6 +48,7 @@ class ToppsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to root_path unless user_signed_in?
+    redirect_to root_path, notice: "ログインが必要です"unless user_signed_in?
   end
+
 end
