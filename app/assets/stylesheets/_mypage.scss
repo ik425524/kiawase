@@ -37,6 +37,14 @@
 
     .slick-list {
       width: 50%;
+
+      .slick-track {
+        margin: auto;
+
+        .slick-slide.slick-current.slick-active {
+          margin: 0 auto;
+        }
+      }
     }
 
     &__image {
