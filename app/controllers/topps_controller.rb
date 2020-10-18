@@ -36,7 +36,7 @@ class ToppsController < ApplicationController
   end
 
   def search
-    @topp_images = Topp.search(params[:keyword])
+    @topp_images = Topp.where(user_id: current_user.id).search(params[:keyword])
     @bottom_images = current_user.bottoms
     user = User.find(params[:id])
     @nickname = user.nickname

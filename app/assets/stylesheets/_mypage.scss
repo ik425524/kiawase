@@ -35,27 +35,21 @@
     background-color: ivory;
     margin-top: 50px;
 
-    .slick-list {
-      width: 50%;
-
-      .slick-track {
-        margin: auto;
-
-        .slick-slide.slick-current.slick-active {
-          margin: 0 auto;
-        }
-      }
+    .slick-track {
+      width: 500px;
+      margin: -10px 10px 10px 10px;
     }
-
     &__image {
       height: 150px;
-      width: 50%;
+      width: 500px;
       margin: 10px;
       margin-top: -20px;
+      margin: 0 auto;
     }
     &__image:hover {
       opacity: 0.5;
     }
+
     .slick-next {
       right: 25px;
     }
@@ -66,18 +60,22 @@
     background-color: ivory;
     margin-top: 5px;
 
-    .slick-list {
-      width: 50%;
+    .slick-track {
+      width: 500px;
+      margin: -10px 10px 10px 10px;
     }
-
     &__image {
       height: 150px;
-      width: 50%;
+      width: 500px;
       margin: 10px;
       margin-top: -20px;
+      margin: 0 auto;
     }
     &__image:hover {
       opacity: 0.5;
+    }
+    .slick-track {
+      width: 500px;
     }
     .slick-next {
       right: 25px;
@@ -87,6 +85,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+
     &__topps {
       border: solid 3px #8a8a8a;
       background-color: #bcf0d0;
