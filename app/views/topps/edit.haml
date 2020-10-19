@@ -1,17 +1,4 @@
 .wrapper
   .registration__title
     edit
-  = form_with model: @topp, class: :form, local: true do |form|
-    = form.file_field :image, class: :image__registration
-    画像を選択してください
-    .registration__title
-      size
-    = form.text_field :size, class: :registration__box
-    .registration__title
-      maker
-    = form.text_field :maker, class: :registration__box
-    .registration__title
-      category
-    = form.text_field :category, class: :registration__box
-    .br/
-    = form.submit 'registration', class: :registration__btn
+  = render partial: "new"

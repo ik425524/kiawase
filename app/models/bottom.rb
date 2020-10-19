@@ -1,5 +1,6 @@
 class Bottom < ApplicationRecord
   belongs_to :user
+  validates :category, presence: true
 
   def self.search(search)
     if search

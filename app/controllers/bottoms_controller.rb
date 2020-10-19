@@ -1,5 +1,6 @@
 class BottomsController < ApplicationController
   before_action :move_to_index
+  before_action :set_bottoms, only: [:show, :edit]
 
   def new
     @bottom = Bottom.new
@@ -21,11 +22,9 @@ class BottomsController < ApplicationController
   end
 
   def show
-    @bottom = Bottom.find(params[:id])
   end
 
   def edit
-    @bottom = Bottom.find(params[:id])
     redirect_to root_path,notice:"このurlは指定出来ません" unless current_user.id == @bottom.user_id
   end
 
@@ -36,7 +35,7 @@ class BottomsController < ApplicationController
   end
 
   def search
-    @bottom_images = Bottom.search(params[:keyword])
+    @bottom_images = Bottom.where(user_id: current_user.id).search(params[:keyword])
     @topp_images = current_user.topps
     user = User.find(params[:id])
     @nickname = user.nickname
@@ -49,5 +48,9 @@ class BottomsController < ApplicationController
 
   def move_to_index
     redirect_to root_path unless user_signed_in?
+  end
+
+  def set_bottoms
+    @bottom = Bottom.find(params[:id])
   end
 end

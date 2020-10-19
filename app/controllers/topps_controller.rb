@@ -1,5 +1,6 @@
 class ToppsController < ApplicationController
   before_action :move_to_index
+  before_action :set_topps, only: [:show, :edit]
 
   def new
     @topp = Topp.new
@@ -21,11 +22,9 @@ class ToppsController < ApplicationController
   end
 
   def show
-    @topp = Topp.find(params[:id])
   end
 
   def edit
-    @topp = Topp.find(params[:id])
     redirect_to root_path,notice:"このurlは指定出来ません" unless current_user.id == @topp.user_id
   end
 
@@ -51,4 +50,7 @@ class ToppsController < ApplicationController
     redirect_to root_path, notice: "ログインが必要です"unless user_signed_in?
   end
 
+  def set_topps
+    @topp = Topp.find(params[:id])
+  end
 end
