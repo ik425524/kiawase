@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_053753) do
+ActiveRecord::Schema.define(version: 2020_10_20_030723) do
 
   create_table "bottoms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_053753) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category"], name: "index_bottoms_on_category", length: 30
     t.index ["user_id"], name: "index_bottoms_on_user_id"
   end
 
@@ -27,10 +28,11 @@ ActiveRecord::Schema.define(version: 2020_10_02_053753) do
     t.string "image"
     t.integer "size"
     t.string "maker"
-    t.string "category"
+    t.string "category", default: ""
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category"], name: "index_topps_on_category", length: 30
     t.index ["user_id"], name: "index_topps_on_user_id"
   end
 

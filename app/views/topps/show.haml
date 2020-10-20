@@ -1,25 +1,26 @@
-.wrapper
-  = image_tag @topp.image.to_s, class: "show__image"
-  .show
-    .show__lists
-      .show__lists__title
-        category
-      .show__lists__list
-        =@topp.category
-    .show__lists
-      .show__lists__title
-        maker
-      .show__lists__text
-        =@topp.maker
-    .show__lists
-      .show__lists__title
-        size
-      .show__lists__text
-        =@topp.size
-  -if user_signed_in? && current_user.id == @topp.user_id
-    .show__btns
-      = link_to "Edit", edit_topp_path(@topp.id), class: "show__btns__left"
-      = link_to "Delete", topp_path(@topp.id), method: :delete, class: "show__btns__right"
+.show__wrapper
+  .show__container
+    = image_tag @topp.image.to_s, class: "show__image"
+    .show
+      .show__lists
+        .show__lists__title
+          category
+        .show__lists__list
+          =@topp.category
+      .show__lists
+        .show__lists__title
+          maker
+        .show__lists__text
+          =@topp.maker
+      .show__lists
+        .show__lists__title
+          size
+        .show__lists__text
+          =@topp.size
+    -if user_signed_in? && current_user.id == @topp.user_id
+      .show__btns
+        = link_to "Edit", edit_topp_path(@topp.id), class: "show__btns__left"
+        = link_to "Delete", topp_path(@topp.id), method: :delete, class: "show__btns__right"
   
  
 

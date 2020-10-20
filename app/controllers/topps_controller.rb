@@ -53,4 +53,5 @@ class ToppsController < ApplicationController
   def set_topps
     @topp = Topp.find(params[:id])
   end
+  
 end

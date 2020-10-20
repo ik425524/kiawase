@@ -1,24 +1,17 @@
-# README
+# Ki-awase
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 出来ること
 
-Things you may want to cover:
+このアプリでお子様の洋服の管理と、配色の組み合わせを確認することが出来ます。
 
-* Ruby version
+## デプロイ先
 
-* System dependencies
+## 制作背景
 
-* Configuration
+息子の洋服がすぐにサイズアウトする為、サイズやカテゴリごとにデータで管理したいと思ったのが一つのきっかけです。
+また洋服を購入する際に、今持っている服のデザインや色が、外出先でも見れたら合わせて購入の判断材料に出来ると考えたことも制作した理由の一つです。
+登録しておいた洋服を組み合わせてコーディネート出来る機能が欲しいと要望があり実装しました。
 
-* Database creation
+## 工夫したポイント
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+トップスとボトムスの組み合わせを実現する為、無限にスライドできるよう実装しました。カテゴリーで検索をかけることも出来ます。
