@@ -1,22 +1,23 @@
-.wrapper
-  = image_tag @bottom.image.to_s, class: "show__image"
-  .show
-    .show__lists
-      .show__lists__title
-        categorie
-      .show__lists__list
-        = @bottom.category
-    .show__lists
-      .show__lists__title
-        maker
-      .show__lists__text
-        = @bottom.maker
-    .show__lists
-      .show__lists__title
-        size
-      .show__lists__text
-        = @bottom.size
-  -if user_signed_in? && current_user.id == @bottom.user_id
-    .show__btns
-      = link_to "Edit", edit_bottom_path(@bottom.id), class: "show__btns__left"
-      = link_to "Delete", bottom_path(@bottom.id), method: :delete, class: "show__btns__right"
+.show__wrapper
+  .show__container
+    = image_tag @bottom.image.to_s, class: "show__image"
+    .show
+      .show__lists
+        .show__lists__title
+          categorie
+        .show__lists__list
+          = @bottom.category
+      .show__lists
+        .show__lists__title
+          maker
+        .show__lists__text
+          = @bottom.maker
+      .show__lists
+        .show__lists__title
+          size
+        .show__lists__text
+          = @bottom.size
+    -if user_signed_in? && current_user.id == @bottom.user_id
+      .show__btns
+        = link_to "Edit", edit_bottom_path(@bottom.id), class: "show__btns__left"
+        = link_to "Delete", bottom_path(@bottom.id), method: :delete, class: "show__btns__right"

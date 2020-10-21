@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'posts#index'
-  resources :posts, only: [:index, :show,]
-  resources :topps, only: [:new, :create, :destroy, :edit, :update, :show] do
+  post '/posts/guest_sign_in', to: 'posts#new_guest'
+  resources :posts, only: [:index, :show,] do
+    member do
+      get 'list_show'
+    end
+  end
+  resources :topps, except: [:index] do
     member do
       get 'search'
     end
   end
-  resources :bottoms, only: [:new, :create, :destroy, :edit, :update,:show] do
+  resources :bottoms, except: [:index] do
     member do
       get 'search'
     end

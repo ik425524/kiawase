@@ -39,10 +39,13 @@ a {
   &__btn {
     display: flex;
     justify-content: space-around;
-    width: 250px;
+    width: 300px;
     font-size: 20px;
 
     &__right:hover {
+      font-size: 30px;
+    }
+    &__middle:hover {
       font-size: 30px;
     }
     &__left:hover {
@@ -91,6 +94,6 @@ a {
     animation-duration: 2s;
   }
   &__btn:hover {
-    font-size: 30px;
+    font-size: 25px;
   }
 }

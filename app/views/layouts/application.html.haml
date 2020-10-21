@@ -17,7 +17,9 @@
       .header__btn
         -if user_signed_in?
           .header__btn__left
-            = link_to "My-page",post_path(current_user)
+            = link_to "Out-fit",post_path(current_user)
+          .header__btn__middle
+            = link_to "List",list_show_post_path(current_user)
           .header__btn__right
             = link_to "Sign-out",destroy_user_session_path, method: :delete
         - else
