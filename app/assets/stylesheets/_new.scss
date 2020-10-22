@@ -1,6 +1,9 @@
 // 投稿ページ
-.wrapper {
+.new__wrapper {
+  height: 600px;
   padding-top: 30px;
+  background-color: #e6d4bd;
+  text-align: center;
   .new__container {
     background-color: ivory;
     height: 80%;
@@ -39,11 +42,5 @@
       font-size: 20px;
       cursor: pointer;
     }
-  }
-}
-// レスポンシブ対応
-@media (max-width: 600px) {
-  .wrapper {
-    height: 650px !important;
   }
 }

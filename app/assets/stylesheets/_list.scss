@@ -1,6 +1,11 @@
 // 一覧画面
 .wrapper {
+  background-color: #e6d4bd;
+  height: 750px;
+  text-align: center;
   .mypage__title {
+    padding: 30px;
+    font-size: 30px;
   }
   .list__container {
     display: flex;
@@ -45,10 +50,44 @@
       }
     }
   }
+  .registration__btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+    &__topps {
+      border: solid 3px #8a8a8a;
+      background-color: #bcf0d0;
+      border-radius: 20px;
+      height: 50px;
+      width: 200px;
+      line-height: 50px;
+    }
+    a {
+      margin-top: -30px;
+    }
+    &__topps:hover {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    &__bottoms {
+      border: solid 3px #8a8a8a;
+      background-color: #bcf0d0;
+      border-radius: 20px;
+      height: 50px;
+      width: 200px;
+      line-height: 50px;
+    }
+    &__bottoms:hover {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
 }
+
 // レスポンシブ対応
 @media (max-width: 600px) {
   .wrapper {
-    height: 100%;
+    height: 100% !important;
   }
 }

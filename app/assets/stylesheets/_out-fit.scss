@@ -1,5 +1,8 @@
 // out-fitページ
-.wrapper {
+.fit__wrapper {
+  background-color: #e6d4bd;
+  height: 750px;
+  text-align: center;
   .mypage__title {
     font-size: 40px;
   }
@@ -37,7 +40,7 @@
     width: 100%;
 
     .slick-track {
-      margin: -20px 10px 10px 10px;
+      margin: 10px 10px 10px 10px;
     }
     &__image {
       height: 150px;
@@ -59,7 +62,7 @@
     width: 100%;
 
     .slick-track {
-      margin: -20px 10px 10px 10px;
+      margin: 10px 10px 10px 10px;
     }
     &__image {
       height: 150px;
@@ -110,7 +113,7 @@
 // レスポンシブ対応
 @media (max-width: 600px) {
   .wrapper {
-    height: 100% !important;
+    height: 1900px;
   }
   .search__btn {
     margin-top: 10px;
