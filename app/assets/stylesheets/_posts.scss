@@ -20,7 +20,6 @@ a {
   height: 95px;
   background-color: #7bf4a9;
   color: white;
-  height: 95px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,5 +94,23 @@ a {
   }
   &__btn:hover {
     font-size: 25px;
+  }
+}
+.footer {
+  height: 60px;
+  background-color: #7bf4a9;
+  color: white;
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+  border-style: solid;
+}
+// レスポンシブ対応
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 30px;
+  }
+  .header__title:hover {
+    font-size: 40px;
   }
 }

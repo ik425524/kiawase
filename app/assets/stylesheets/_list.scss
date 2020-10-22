@@ -1,0 +1,54 @@
+// 一覧画面
+.wrapper {
+  .mypage__title {
+  }
+  .list__container {
+    display: flex;
+
+    &__left {
+      width: 50%;
+      border-right: dotted;
+      .list__container__title {
+        font-size: 30px;
+      }
+      .list__container__images {
+        display: grid;
+        gap: 4px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        .list__container__image {
+          width: 150px;
+          height: 150px;
+        }
+        .list__container__image:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    &__right {
+      width: 50%;
+      .list__container__title {
+        font-size: 30px;
+      }
+      .list__container__images {
+        display: grid;
+        gap: 4px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+        .list__container__image {
+          width: 150px;
+          height: 150px;
+        }
+        .list__container__image:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+// レスポンシブ対応
+@media (max-width: 600px) {
+  .wrapper {
+    height: 100%;
+  }
+}

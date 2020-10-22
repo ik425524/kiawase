@@ -48,3 +48,9 @@
     font-size: 20px;
   }
 }
+// レスポンシブ対応
+@media (max-width: 600px) {
+  input {
+    width: 50%;
+  }
+}

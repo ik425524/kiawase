@@ -2,12 +2,19 @@
   .mypage__title
     = @nickname
     sList
-  .topps__container
-    - @topp_images.each do |t_image|
-      = link_to image_tag(t_image.image.to_s, class:"topps__container__image"),"/topps/#{t_image.id}", method: :get
-  .bottoms__container
-    - @bottom_images.each do |b_image|
-      = link_to image_tag(b_image.image.to_s, class:"bottoms__container__image"),"/bottoms/#{b_image.id}", method: :get
+  .list__container
+    .list__container__left
+      .list__container__title
+        topps
+      .list__container__images
+        - @topp_images.each do |t_image|
+          = link_to image_tag(t_image.image.to_s, class:"list__container__image"),"/topps/#{t_image.id}", method: :get
+    .list__container__right
+      .list__container__title
+        bottoms
+      .list__container__images
+        - @bottom_images.each do |b_image|
+          = link_to image_tag(b_image.image.to_s, class:"list__container__image"),"/bottoms/#{b_image.id}", method: :get
   .registration__btns
     .registration__btns__topps
       = link_to "Topps-registration",new_topp_path
