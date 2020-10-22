@@ -109,6 +109,9 @@
 }
 // レスポンシブ対応
 @media (max-width: 600px) {
+  .wrapper {
+    height: 100% !important;
+  }
   .search__btn {
     margin-top: 10px;
   }
