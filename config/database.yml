@@ -52,6 +52,3 @@ production:
   database: kiawase_production
   username: kiawase
   password: <%= ENV['KIAWASE_DATABASE_PASSWORD'] %>
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
