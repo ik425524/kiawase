@@ -72,3 +72,6 @@ gem 'pry-rails'
 gem 'jquery-ui-rails'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
