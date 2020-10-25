@@ -1,4 +1,4 @@
-lock '3.1'
+lock '3.14.1'
 
 set :application, 'kiawase'
 
