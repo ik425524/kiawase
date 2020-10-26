@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'kiawase-2020'
-  config.asset_host = 'https://kiawase-2020.s3.amazonaws.com'
+  # config.asset_host = 'https://kiawase-2020.s3.amazonaws.com'
 end
