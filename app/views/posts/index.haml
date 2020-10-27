@@ -1,8 +1,8 @@
 .main
-  -# .main__text
-  -#   入れ替えの激しいお子様の洋服の管理ができます
-  -#   %br/
-  -#   登録した洋服の着合わせも楽しめます
+  .main__text
+    入れ替えの激しいお子様の洋服の管理ができます
+    %br/
+    登録した洋服の着合わせも楽しめます
   - unless user_signed_in?
     .main__btn
       = link_to "簡単ログイン",posts_guest_sign_in_path, method: :post

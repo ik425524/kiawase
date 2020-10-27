@@ -1,5 +1,7 @@
 lock '3.14.1'
 
+set :linked_files, %w{ config/credentials.yml.enc }
+
 set :application, 'kiawase'
 
 set :repo_url,  'git@github.com:ik425524/kiawase.git'
