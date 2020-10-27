@@ -10,8 +10,8 @@ class ToppsController < ApplicationController
     @topp = Topp.new(topp_params)
     if @topp.save
       redirect_to post_path(current_user),notice: "登録が完了しました"    
-    else
-      redirect_to new_topp_path,notice: "登録に失敗しました"
+    # else
+    #   redirect_to new_topp_path,notice: "登録に失敗しました"
     end
   end
 
