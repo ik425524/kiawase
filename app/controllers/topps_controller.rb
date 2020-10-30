@@ -8,6 +8,7 @@ class ToppsController < ApplicationController
 
   def create
     @topp = Topp.new(topp_params)
+    logger.debug("[debug] users#index")
     if @topp.save
       redirect_to post_path(current_user),notice: "登録が完了しました"    
     else
