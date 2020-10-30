@@ -25,5 +25,4 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
-end :finishing, 'deploy:cleanup'
 end
