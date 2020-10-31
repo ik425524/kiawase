@@ -1,7 +1,7 @@
 // 一覧画面
-.wrapper {
+.list__wrapper {
   background-color: #e6d4bd;
-  height: 750px;
+  height: 100%;
   text-align: center;
   .mypage__title {
     padding: 30px;
@@ -86,8 +86,3 @@
 }
 
 // レスポンシブ対応
-@media (max-width: 600px) {
-  .wrapper {
-    height: 800px !important;
-  }
-}
